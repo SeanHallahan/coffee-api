@@ -1,0 +1,32 @@
+{
+  "orders": [
+    {
+      "name": "Jane",
+      "drink": "Americano w/ Creme",
+      "snack": "Cookie",
+      "special": "Biscotti",
+      "id": 1
+    },
+    {
+      "name": "Bob",
+      "drink": "Hot Chocolate",
+      "snack": "",
+      "special": "",
+      "id": 2
+    },
+    {
+      "name": "Louis",
+      "drink": "Cappuccino",
+      "snack": "Scone, Cheesecake",
+      "special": "Brownie",
+      "id": 3
+    },
+    {
+      "name": "John",
+      "drink": "Coffee",
+      "snack": "Cheesecake",
+      "special": "Brownie",
+      "id": 4
+    }
+  ]
+}

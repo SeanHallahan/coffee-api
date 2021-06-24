@@ -27,6 +27,41 @@
       "snack": "Cheesecake",
       "special": "Brownie",
       "id": 4
+    },
+    {
+      "name": "Sean",
+      "drink": "Latte",
+      "snack": "Toastie",
+      "special": "Danish",
+      "id": 5
+    },
+    {
+      "name": "Mark",
+      "drink": "Tea",
+      "snack": "Granola",
+      "special": "Danish",
+      "id": 6
+    },
+    {
+      "name": "Tobias",
+      "drink": "Espresso",
+      "snack": "Sandwich",
+      "special": "Muffin",
+      "id": 7
+    },
+    {
+      "name": "Caoimhe",
+      "drink": "Tea",
+      "snack": "Toastie",
+      "special": "Sweets",
+      "id": 8
+    },
+    {
+      "name": "Andrew",
+      "drink": "Caramel Machiatto",
+      "snack": "Blueberry Muffin ",
+      "special": "Iced",
+      "id": 9
     }
   ]
 }

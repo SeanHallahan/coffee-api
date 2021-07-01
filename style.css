@@ -1,0 +1,81 @@
+/* Body Margin-Bottom To Fit Fixed-Footer */
+body {
+    margin-bottom: 40px;
+}
+
+
+/* Heading Styles */
+#heading {
+    padding: 10px;
+}
+
+#heading.bg-success {
+    width: 100%;
+    margin: 0px;
+}
+
+#subheading {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+.order-heading {
+    background: #5cb85c;
+    color: #fff;
+    padding: 10px;
+}
+
+.incoming-order-heading {
+    background: #5cb85c;
+    color: #fff;
+    padding: 10px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 8px;
+}
+
+
+/* Horizontal Rule Divider */
+hr {
+    border: #000 solid 1px;
+}
+
+
+/* Menu Items */
+.list-unstyled > li {
+    font-size: 16px;
+    text-indent: 20px;
+}
+
+ul#orders > li {
+    padding: 10px;
+    margin: 15px;
+}
+
+
+/* Incoming Order */
+.incoming-order {
+    padding: 10px;
+}
+
+/* Edit Mode */
+ul li .edit {
+    display: none;  /* Front End View */
+}
+
+ul li.edit .edit {
+    display: initial; /* Edit Mode */
+}
+
+ul li.edit .noedit { /* Removes Front End View */
+    display: none;
+}
+
+
+/* Footer */
+footer {
+    padding: 5px;
+    font-size: 16px;
+}

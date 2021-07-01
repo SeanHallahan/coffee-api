@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Coffee Shop</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Heading -->
+    <h1 id="heading" class="text-center bg-success">Sean's Budget Starbucks &amp; Snack Shop</h1>
+
+    <h2 id="subheading" class="text-center bg-primary">Order Up &amp; Enjoy!</h2>
+    <!-- END Heading -->
+
+    <!-- Container -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Pending Orders -->
+            <div class="col-md-12 col-sm-12 text-center">
+
+                <h3 class="order-heading text-uppercase">Incoming Orders</h3>
+                <ul id="orders" class="list-unstyled list-inline"></ul>
+
+                 <!-- Template for Orders List -->
+                 <template id="order-template">
+                    <li data-id="{{id}}">
+
+                        <!-- Order ID Display -->
+                        <p class="incoming-order-heading">
+                            <strong>Order # {{id}}</strong>
+                        </p>
+                         <!-- END Order ID Display -->
+
+                         <form class="form-horizontal">
+
+                            <!-- Name Display and Input -->
+                            <div class="form-group text-justify">
+                              <label for="name" class="control-label">
+                                <strong id="names">Name:</strong>
+                              </label>
+                              <span class="noedit name">{{name}}</span>
+                              <input type="text" class="edit name form-control">
+                            </div>
+                            <!-- END Name Display and Input -->
+
+                            <!-- Drink Display and Input -->
+                        <div class="form-group text-justify">
+                            <label for="drink">
+                                <strong id="drinks">Drink:</strong>
+                            </label>
+                            <span class="noedit drink">{{drink}}</span>
+                            <input class="edit drink form-control">
+                        </div>
+                        <!-- END Drink Display and Input -->
+
+                        <!-- Snack Display and Input -->
+                        <div class="form-group text-justify">
+                            <label for="snack">
+                                <strong id="snacks">Snack:</strong>
+                            </label>
+                            <span class="noedit snack">{{snack}}</span>
+                            <input class="edit snack form-control">
+                        </div>
+                        <!-- END Snack Display and Input -->
+
+                        <!-- Specials Display and Input -->
+                        <div class="form-group text-justify">
+                            <label for="specials">
+                                <strong id="specials">Specials:</strong>
+                            </label>
+                            <span class="noedit special">{{special}}</span>
+                            <input class="edit special form-control">
+                        </div>
+                        <!-- END Specials Display and Input -->
+
+                    </form>
+
+                    <!-- Action Buttons -->
+                    <button class="editOrder noedit btn btn-success">Edit Order</button>
+
+                    <button data-id='{{id}}' class="remove noedit btn btn-primary">Remove Order</button>
+
+                    <button class="saveEdit edit btn btn-info">Save Edit</button>
+
+                    <button class="cancelEdit edit btn btn-warning">Cancel Edit</button>
+                    <!-- END Action Buttons -->
+
+                </li>
+            </template>
+            <!-- END Template for Orders List -->
+
+        </div>
+        <!-- END Pending Orders -->
+
+        <hr>
+
+        <!-- Orders Input -->
+            <div class="col-md-6 col-sm-6 text-center">
+
+                <h3 class="order-heading text-uppercase">Add An Order</h3>
+
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Customer name: </label>
+                        <div class="col-sm-9">
+                            <input type="text" id="name" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="drink" class="col-sm-3 control-label">Drink:</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="drink" class="form-control">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="snack" class="col-sm-3 control-label">Snack:</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="snack" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="special" class="col-sm-3 control-label">Special:</label>
+                        <div class="col-sm-9">
+                            <input type="text" id="special" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <button id="add-order" class="btn btn-success btn-block btn-lg text-uppercase">Add Order</button>
+
+            </div>
+            <!-- END Orders Input -->
+
+            <!-- Store Menu -->
+            <div class="col-md-6 col-sm-6">
+                <h3 class="order-heading text-center text-uppercase">Current Menu</h3>
+
+                <div class="row">
+
+                    <!-- Drinks -->
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled">
+                            <li>
+                                <h3><u>Drinks</u></h3>
+                            </li>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Hot Chocolate</li>
+                            <li>Espresso</li>
+                            <li>Latte</li>
+                            <li>Cappuccino</li>
+                            <li>Caramel Machiatto</li>
+                        </ul>
+                    </div>
+                    <!-- END Drinks -->
+
+                    <!-- Snacks -->
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled">
+                            <li>
+                                <h3><u>Snacks</u></h3>
+                            </li>
+                            <li>Cookie</li>
+                            <li>Scone</li>
+                            <li>Cheesecake</li>
+                            <li>Toastie</li>
+                            <li>Granola</li>
+                            <li>Sandwich</li>
+                            <li>Blueberry Muffin</li>
+                        </ul>
+                    </div>
+                    <!-- END Snacks -->
+
+                    <!-- Specials -->
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled">
+                            <li>
+                                <h3><u>Specials</u></h3>
+                            </li>
+                            <li>Biscotti</li>
+                            <li>Vanilla</li>
+                            <li>Double</li>
+                            <li>Iced</li>
+                            <li>Frappuccino</li>
+                        </ul>
+                    </div>
+                    <!-- END Specials -->
+
+                </div>
+            </div>
+            <!-- END Store Menu -->
+        </div>
+    </div>
+    <!-- END Container -->
+
+    <footer class="bg-success text-center navbar-fixed-bottom"><strong>Sean Hallahan &copy; 2021</strong></footer>
+
+    <!-- JavaScript -->
+    <!--jQuery 1.x-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Custom script -->
+    <script src="main.js"></script>
+
+    <!-- Mustache.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+
+</body>
+</html>

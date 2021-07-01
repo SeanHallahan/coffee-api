@@ -1,4 +1,4 @@
-# Coffe Shop Api, with order edit and delete function.
+# Coffee Shop Api, with order edit and delete function.
 
 For fourth year of my degree in Computing in the National College of Ireland (NCI) I apart of my Software Devlopment specialization will have to create my own API.
 

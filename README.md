@@ -10,6 +10,9 @@ Orders are saved to an API saved on heroku.
 
 This application contains a lot of Java script as well as html and css.
 
+https://sean-h-coffee-api-project.herokuapp.com/orders -- Put into browser to view JSON or raw data.
+-add /1 to the endpoint or any of the listed ID's in /orders to show just one order.
+
 Thank you for viewing.
 
 Sean Hallahan 2021.
